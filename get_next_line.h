@@ -6,7 +6,16 @@
 /*   By: maratojo <maratojo@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 15:42:38 by maratojo          #+#    #+#             */
-/*   Updated: 2026/02/23 15:42:43 by maratojo         ###   ########.fr       */
+/*   Updated: 2026/03/03 16:44:45 by maratojo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+
+
+
+
+
+
+#endif
