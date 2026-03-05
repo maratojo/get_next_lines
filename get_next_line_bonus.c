@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maratojo <maratojo@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/12 09:21:36 by maratojo          #+#    #+#             */
-/*   Updated: 2026/03/05 21:08:22 by maratojo         ###   ########.fr       */
+/*   Created: 2026/03/05 18:08:03 by maratojo          #+#    #+#             */
+/*   Updated: 2026/03/05 21:14:37 by maratojo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*stock_read(int fd, char *stock)
 {
@@ -72,19 +72,19 @@ static char	*extract_line(char **stock)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*stock;
+	static char	*stock[1024];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > 1024 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!stock)
+	if (!stock[fd])
 	{
-		stock = ft_strdup("");
-		if (!stock)
+		stock[fd] = ft_strdup("");
+		if (!stock[fd])
 			return (NULL);
 	}
-	stock = stock_read(fd, stock);
-	if (!stock)
+	stock[fd] = stock_read(fd, stock[fd]);
+	if (!stock[fd])
 		return (NULL);
-	line = extract_line(&stock);
+	line = extract_line(&stock[fd]);
 	return (line);
 }
