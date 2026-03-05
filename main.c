@@ -6,7 +6,7 @@
 /*   By: maratojo <maratojo@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 16:04:27 by maratojo          #+#    #+#             */
-/*   Updated: 2026/03/05 11:59:30 by maratojo         ###   ########.fr       */
+/*   Updated: 2026/03/05 16:41:55 by maratojo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,17 @@ int main(void)
 	char *line;
 
 	fd = open("test.txt", O_RDONLY);
-	if (fd == -1)
-	{
-		perror("Error opening file");
-		return (1);
-	}
 	line = get_next_line(fd);
+	// printf("%s", line);
+	// free(line);
 	while (line)
 	{
 		printf("%s", line);
 		free(line);
-		line = get_next_line(fd);
+		line = get_next_line(42);
 	}
+	printf("%s", line);
+	free(line);
 	close(fd);
 	return (0);
 }
