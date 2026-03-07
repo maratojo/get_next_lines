@@ -6,7 +6,7 @@
 /*   By: maratojo <maratojo@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 18:09:30 by maratojo          #+#    #+#             */
-/*   Updated: 2026/03/05 21:16:35 by maratojo         ###   ########.fr       */
+/*   Updated: 2026/03/07 15:26:01 by maratojo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);
