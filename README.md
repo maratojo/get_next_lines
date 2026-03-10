@@ -173,13 +173,13 @@ while ((line = get_next_line(fd)) != NULL)
 
 ```
 get_next_line/
-├── get_next_line.c           # Main function
-├── get_next_line_utils.c     # Helper functions
-├── get_next_line.h           # Header file
-├── get_next_line_bonus.c     # Bonus: multi-FD support
-├── get_next_line_utils_bonus.c
-├── get_next_line_bonus.h
-└── README.md                 # This file
+├── get_next_line.c             (Main function)
+├── get_next_line_utils.c       (Helper functions)
+├── get_next_line.h             (Header file)
+├── get_next_line_bonus.c       (Bonus: multi-FD support)
+├── get_next_line_utils_bonus.c (Bonus: helper functions)
+├── get_next_line_bonus.h       (Bonus: header )
+└── README.md                   (This file)
 ```
 
 ---
