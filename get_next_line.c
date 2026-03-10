@@ -6,7 +6,7 @@
 /*   By: maratojo <maratojo@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 09:21:36 by maratojo          #+#    #+#             */
-/*   Updated: 2026/03/05 21:08:22 by maratojo         ###   ########.fr       */
+/*   Updated: 2026/03/09 08:25:12 by maratojo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,24 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = extract_line(&stock);
 	return (line);
+}
+#include <stdio.h>
+#include <fcntl.h>
+int main()
+{
+	char *line;
+	int fd;
+	fd = open("test.txt", O_RDONLY);
+
+	line = get_next_line(fd);
+	printf("1: %s", line);
+	while (line)
+	{
+		free(line);
+		line = get_next_line(fd);
+	}
+
+	// free(line);
+	close(fd);
+
 }
